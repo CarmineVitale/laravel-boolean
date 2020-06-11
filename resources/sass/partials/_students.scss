@@ -1,0 +1,31 @@
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    .students {
+        padding: 10px 10px 0;
+        flex-basis: 45%;
+        background: lightgrey;
+        margin-bottom: 20px;
+        min-height: 300px;
+        
+        transition: transform .4s linear;
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 10px 10px 10px rgba(40, 40, 0, 0.5);
+        }
+        a {
+            text-decoration: none;
+            color: darkblue;
+        }
+        img {
+            width: 100px;
+            margin-right: 10px;
+        }
+        p {
+            color: black;
+        }
+    }
+}

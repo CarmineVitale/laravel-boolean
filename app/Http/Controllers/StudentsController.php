@@ -57,7 +57,26 @@ class StudentsController extends Controller
         $students = $this->students;
         return view('students.index', compact('students') );
     }
-    // public function show($id) {
-    //     return view('students.show');
-    // }
+    public function show($id) {
+
+        $student = $this->cercaStudente($id, $this->students);
+
+        if (!$student) {
+            abort('404');
+        }
+
+
+        return view('students.show', compact('student'));
+    }
+
+    //controllo se lo studente esiste tramite l'id
+    private function cercaStudente($id, $array) {
+        foreach ($array as $items) {
+            if ($items['id'] == $id) {
+                return $items;
+            } 
+            
+        }
+        return false;
+    }
 }
