@@ -19,7 +19,7 @@
                     href="{{ route('static-page.home') }}">HOME</a> </li>
                 <li> <a href="#">CORSO</a> </li>
                 <li> <a @if (Request::route()->getName() == 'students.index') class="active" @endif
-                     href="">DOPO IL CORSO</a> </li>
+                     href="{{ route('students.index') }}">DOPO IL CORSO</a> </li>
                 <li> <a href="#">LEZIONE GRATUITA</a> </li>
                 <li> <a href="#">ASSUMI I NOSTRI STUDENTI</a> </li>
                 <li> <a href="#">CANDIDATI ORA</a> </li>
