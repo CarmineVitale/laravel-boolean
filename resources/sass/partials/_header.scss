@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 10px;
+    .title img {
+        width: 200px;
+    }
+    .menu ul li {
+        display: inline-block;
+        margin-right: 10px;
+        list-style: none;
+        a {
+            text-decoration: none;
+            color: darkblue;
+            border-bottom: 2px solid transparent;
+            padding: 15px;
+            &.active,
+            &:hover {
+            border-bottom-color: green;
+            }
+        }
+    }
+}
