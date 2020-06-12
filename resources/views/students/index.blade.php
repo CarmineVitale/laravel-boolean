@@ -2,6 +2,17 @@
 
 @section('content')
 <h1>I nostri ex studenti</h1>
+
+<div class="filter" style="margin-bottom: 40px;">
+    <select name="filter" id="filter">
+        @foreach ($genders as $gender)
+        <option value="{{$gender}}">
+            @if ($gender == 'm') Uomo @elseif ($gender == 'f') Donna @else All @endif        
+        </option>
+        @endforeach
+    </select> 
+</div>
+
 <div class="box">
     @foreach($students as $student)
     <div class="students">
