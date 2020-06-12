@@ -20,4 +20,4 @@ Route::get('/faq', 'StaticpageController@faq')->name('static-page.faq');
 
 //PAgina con studenti e dettaglio studenti
 Route::get('/students', 'StudentsController@index')->name('students.index');
-Route::get('students/show/{id}', 'StudentsController@show')->name('students.show');
+Route::get('students/show/{slug}', 'StudentsController@show')->name('students.show');
